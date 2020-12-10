@@ -39,7 +39,8 @@ span {
 }
 
 .play {
-  transform: scale(1.2);
-  border-color: #c8984c;
+  transform: scale(2);
+  border-color: #ffc600;
+  box-shadow: 0 0 10px #ffc600;
   opacity: 0.5;
 }

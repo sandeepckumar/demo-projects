@@ -90,10 +90,9 @@
         audio.currentTime = 0;
         audio.play();
         key.classList.add("play");
-
-        window.addEventListener("click", (e) => {
-          console.log(e);
-        });
+        setTimeout(() => {
+          key.classList.remove("play");
+        }, 100);
       });
     </script>
   </body>
