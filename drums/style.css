@@ -1,0 +1,45 @@
+body {
+  background: url("bg1.jpg") no-repeat center center fixed;
+  background-size: cover;
+}
+
+.keys {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+  grid-template-rows: repeat();
+  grid-gap: 1rem;
+  color: beige;
+  place-self: center;
+  text-align: center;
+}
+
+.key {
+  background-color: #4c4c4c;
+  text-align: center;
+  border: solid 5px;
+  border-color: #343434;
+  border-radius: 5px;
+  color: white;
+  opacity: 0.7;
+  padding: 10px;
+}
+
+kbd {
+  display: block;
+  color: #c8984c;
+  z-index: 2;
+  size: 10px;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-size: 2rem;
+  padding-bottom: 20px;
+}
+
+span {
+  color: white;
+}
+
+.play {
+  transform: scale(1.2);
+  border-color: #c8984c;
+  opacity: 0.5;
+}

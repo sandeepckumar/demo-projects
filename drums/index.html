@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Drums</title>
+  </head>
+  <body>
+    <div class="keys">
+      <div data-key="65" class="key">
+        <kbd>A</kbd>
+        <span class="audio">Clap 01</span>
+      </div>
+      <div data-key="83" class="key">
+        <kbd>S</kbd>
+        <span class="audio">Clap 02</span>
+      </div>
+      <div data-key="68" class="key">
+        <kbd>D</kbd>
+        <span class="audio">Close Hat 01</span>
+      </div>
+      <div data-key="70" class="key">
+        <kbd>F</kbd>
+        <span class="audio">Close Hat 02</span>
+      </div>
+      <div data-key="71" class="key">
+        <kbd>G</kbd>
+        <span class="audio">Crash 01</span>
+      </div>
+      <div data-key="72" class="key">
+        <kbd>H</kbd>
+        <span class="audio">Crash 02</span>
+      </div>
+      <div data-key="74" class="key">
+        <kbd>J</kbd>
+        <span class="audio">Kick 01</span>
+      </div>
+      <div data-key="75" class="key">
+        <kbd>K</kbd>
+        <span class="audio">Kick 02</span>
+      </div>
+      <div data-key="76" class="key">
+        <kbd>L</kbd>
+        <span class="audio">Open Hat 01</span>
+      </div>
+      <div data-key="80" class="key">
+        <kbd>P</kbd>
+        <span class="audio">Open Hat 02</span>
+      </div>
+      <div data-key="81" class="key">
+        <kbd>Q</kbd>
+        <span class="audio">Shaker</span>
+      </div>
+      <div data-key="69" class="key">
+        <kbd>E</kbd>
+        <span class="audio">Snare 01</span>
+      </div>
+      <div data-key="82" class="key">
+        <kbd>R</kbd>
+        <span class="audio">Snare 02</span>
+      </div>
+      <div data-key="84" class="key">
+        <kbd>T</kbd>
+        <span class="audio">Tamb</span>
+      </div>
+    </div>
+
+    <audio data-key="65" src="audioClips/clap01.wav"></audio>
+    <audio data-key="83" src="audioClips/clap02.wav"></audio>
+    <audio data-key="68" src="audioClips/clhat01.wav"></audio>
+    <audio data-key="70" src="audioClips/clhat02.wav"></audio>
+    <audio data-key="71" src="audioClips/crash01.wav"></audio>
+    <audio data-key="72" src="audioClips/crash02.wav"></audio>
+    <audio data-key="74" src="audioClips/kick01.wav"></audio>
+    <audio data-key="75" src="audioClips/kick02.wav"></audio>
+    <audio data-key="76" src="audioClips/ophat01.wav"></audio>
+    <audio data-key="80" src="audioClips/ophat02.wav"></audio>
+    <audio data-key="81" src="audioClips/shaker03.wav"></audio>
+    <audio data-key="69" src="audioClips/snare01.wav"></audio>
+    <audio data-key="82" src="audioClips/snare02.wav"></audio>
+    <audio data-key="84" src="audioClips/tamb.wav"></audio>
+
+    <script>
+      window.addEventListener("keydown", (e) => {
+        const audio = document.querySelector(`audio[data-key="${e.keyCode}"]`);
+        const key = document.querySelector(`.key[data-key="${e.keyCode}"]`);
+        console.log(audio);
+        if (!audio) return;
+        audio.currentTime = 0;
+        audio.play();
+        key.classList.add("play");
+
+        window.addEventListener("click", (e) => {
+          console.log(e);
+        });
+      });
+    </script>
+  </body>
+</html>
