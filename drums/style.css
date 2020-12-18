@@ -1,41 +1,56 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
 body {
-  background: url("bg1.jpg") no-repeat center center fixed;
-  background-size: cover;
+  background: url("bg.jpg") center center/cover;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  background-attachment: fixed;
+  padding: 20px;
+  margin: 20px;
+  color: white;
 }
 
 .keys {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
-  grid-template-rows: repeat();
-  grid-gap: 1rem;
-  color: beige;
-  place-self: center;
-  text-align: center;
+  margin: auto;
+  width: 900px;
+  margin-top: 15%;
+  align-content: center;
 }
 
 .key {
-  background-color: #4c4c4c;
-  text-align: center;
-  border: solid 5px;
-  border-color: #343434;
-  border-radius: 5px;
-  color: white;
-  opacity: 0.7;
+  display: inline-block;
+  float: left;
+  margin: 20px;
   padding: 10px;
+  width: 120px;
+  height: 120px;
+  background: #333;
+  border-radius: 10px;
+  opacity: 0.8;
+  z-index: 1;
+  text-align: center;
+  color: beige;
 }
 
 kbd {
   display: block;
-  color: #c8984c;
+  text-align: center;
+  padding: 10px;
+  font-size: 2em;
   z-index: 2;
-  size: 10px;
-  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
-  font-size: 2rem;
-  padding-bottom: 20px;
+  color: #c8984c;
 }
 
-span {
+.audio {
   color: white;
+  font-size: 1.1em;
+  font-weight: bold;
+  padding: 2px;
+  margin: 2px;
+  z-index: 2;
 }
 
 .play {
