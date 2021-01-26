@@ -1,6 +1,7 @@
-var createError = require("http-errors");
+require("dotenv").config();
+const connectDB = require("./utils/db");
+connectDB();
 var express = require("express");
-var path = require("path");
 var cookieParser = require("cookie-parser");
 var logger = require("morgan");
 
@@ -13,7 +14,6 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 
-app.use("/", indexRouter);
-app.use("/users", usersRouter);
+app.use("/api/users", usersRouter);
 
 module.exports = app;
