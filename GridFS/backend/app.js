@@ -4,6 +4,8 @@ const app = express();
 const logger = require("morgan");
 const PORT = process.env.PORT || 5000;
 const userRouter = require("./routes/route.users");
+const connectDB = require("./utils/db");
+connectDB();
 
 app.use(logger("dev"));
 app.use(express.json());
